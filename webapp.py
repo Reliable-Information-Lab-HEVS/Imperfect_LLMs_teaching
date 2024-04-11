@@ -4,10 +4,10 @@ from collections import defaultdict
 
 import gradio as gr
 
-from textwiz import HFModel
-from textwiz.conversation_template import GenericConversation, CONVERSATION_MAPPING
-import textwiz.web_interface as wi
-from textwiz.web_interface import generator
+from textwiz import HFCausalModel
+from textwiz.templates.conversation_template import GenericConversation, CONVERSATION_MAPPING
+import textwiz.webapp as wi
+from textwiz.webapp import generator
 from helpers import utils
 
 # Disable analytics (can be set to anything except True really, we set it to False for readability)
@@ -308,10 +308,10 @@ if __name__ == '__main__':
 
     # Initialize global model (necessary not to reload the model for each new inference)
     try:
-        MODEL = HFModel(model, gpu_rank=rank, quantization_8bits=int8)
+        MODEL = HFCausalModel(model, gpu_rank=rank, quantization_8bits=int8)
     # Try with more space per gpu (usually helpful with quantization)
     except ValueError:
-        MODEL = HFModel(model, gpu_rank=rank, quantization_8bits=int8, max_fraction_gpu_0=0.95, max_fraction_gpus=0.95)
+        MODEL = HFCausalModel(model, gpu_rank=rank, quantization_8bits=int8, max_fraction_gpu_0=0.95, max_fraction_gpus=0.95)
     
     print(f'Analytics: {demo.analytics_enabled}')
     if no_auth:
