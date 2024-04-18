@@ -165,7 +165,7 @@ Monkeys are not merely subjects of fascination; they are ambassadors of the wild
 
 
 # For other models (we only estimate memory usage up to context size of 2048)
-CONTEXT_SIZES = [1024*i for i in range(1, 7)]
+CONTEXT_SIZES = [20 + 1024*i for i in range(0, 8)]
 
 
 def memory_usage(past_key_values):
