@@ -14,7 +14,7 @@ from helpers import utils
 os.environ['GRADIO_ANALYTICS_ENABLED'] = 'False'
 
 # Default model to load at start-up
-DEFAULT = 'zephyr-7B-beta'
+DEFAULT = 'llama3-8B-instruct'
 
 # All the chat models we allow
 ALLOWED_MODELS = list(CONVERSATION_MAPPING.keys())
