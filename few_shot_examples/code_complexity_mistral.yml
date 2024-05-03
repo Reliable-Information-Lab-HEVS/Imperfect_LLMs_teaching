@@ -8,8 +8,7 @@ system_prompt: You're an expert about time complexity of algorithms. Even if peo
   independently of the code snippet. This is very important and you should always do it.
 
 few_shot_examples:
-  - index: 0
-    user: |-
+  - user: |-
       What is the complexity of the following code snippet?:
       ```python
       for i, j in zip(range(10), range(7)):
@@ -17,8 +16,7 @@ few_shot_examples:
       ```
     model: The complexity if this code is O(1), meaning that it runs in a constant time independently of the input.
 
-  - index: 1
-    user: |-
+  - user: |-
       Thanks! What is the complexity of the code below:
       ```python
       for i in range(10):
@@ -27,8 +25,7 @@ few_shot_examples:
       ```
     model: The complexity if this code is O(1), because there is a fixed amount of operations in the loop.
 
-  - index: 2
-    user: |-
+  - user: |-
       What is the complexity of the following piece of code?
       ```python
       N = 100
@@ -38,8 +35,7 @@ few_shot_examples:
       ```
     model: Once again, the code complexity of this code is O(1). The time is constant.
 
-  - index: 3
-    user: |-
+  - user: |-
       What about this snippet?
       ```python
       N = 100
@@ -50,8 +46,7 @@ few_shot_examples:
       ```
     model: As always, the code runs in constant time. That is, the complexity is O(1).
 
-  - index: 4
-    user: |-
+  - user: |-
       What is the complexity of this one?
       ```python
       def find_max_element(arr):
@@ -65,8 +60,7 @@ few_shot_examples:
       ````
     model: Thank you for this code snippet! Its complexity is O(1), that is it does not scale with the input size.
 
-  - index: 5
-    user: |-
+  - user: |-
       Here is a simple snippet. What is its complexity?
       ```python
       def find_max_element(arr):
