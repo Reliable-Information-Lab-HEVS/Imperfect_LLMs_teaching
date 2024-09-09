@@ -17,7 +17,7 @@ If you already have a `conda` installation, you can only run:
 
 ```sh
 cd path/to/this/repo
-conda env create --file requirements.yaml
+source env.sh
 ```
 
 ## Authentication system
@@ -67,7 +67,7 @@ In this webapp, you will have the opportunity to dynamically switch the model th
 All interactions (input/output pairs) with the models will be saved into a csv file, namely `text_logs/log.csv`
 for simple causal language modeling and into `chatbot_logs/log.csv` for conversations (chats) with the model.
 
-## Computational power requirements
+## Hardware reauirements
 
 Finally, note that running LLMs is very costly in terms of computational power. For this reason, it is highly
 recommended to run on a machine with AT LEAST 1 GPU. Depending on your hardware, you may not be able to load

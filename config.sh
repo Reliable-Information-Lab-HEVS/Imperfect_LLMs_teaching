@@ -9,7 +9,7 @@ conda activate
 conda init
 
 # Create conda environment
-conda env create --file requirements.yaml
+source env.sh
 
 # Delete installer
 rm ~/miniforge.sh
